@@ -39,13 +39,13 @@ import NewExpense from './components/ExpenseForm/NewExpense';
   const addExpenseHandler=(expense)=>{
 // console.log("In App.js");
 // console.log(expense);
-setExpenses((prevExpenses=>{
+setExpenses(prevExpenses=>{
   return [expense,...prevExpenses]
-}));
+});
   };
     return (
       <div>
-      <h2>Let's get started!</h2>
+      {/* <h2>Let's get started!</h2> */}
       {/* <ExpenseForm onSaveExpenseData/> */}
       <NewExpense onAddExpense={addExpenseHandler}/>
         <Expenses items={expenses}/>
