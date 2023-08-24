@@ -30,6 +30,7 @@ const ExpenseItem = (props) => {
   // };
   
   return (
+    
     <Card className="expense-item">
       <ExpenseDate date={props.date} />
       
@@ -40,6 +41,7 @@ const ExpenseItem = (props) => {
       <button onClick={deleteHandler}>DeleteExpense</button>
       <button onClick={updateHandler}>ChangeExpense</button> */}
     </Card>
+   
   );
 };
 export default ExpenseItem;
