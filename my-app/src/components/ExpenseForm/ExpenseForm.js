@@ -5,7 +5,6 @@ const ExpenseForm = (props) => {
  const[enteredTitle,setEnteredTitle]=useState("");
  const[enteredAmount,setEnteredAmount]=useState("");
  const[enteredDate,setEnteredDate]=useState("");
-
 // const [userInput,setUserInput]=useState({
 // setEnteredTitle:'',
 // setEnteredAmount:'',
@@ -36,6 +35,8 @@ const ExpenseForm = (props) => {
         // });
         // console.log("Date:",event,event.target.value);
     };
+    
+
     const submitHandler=(e)=>{
 e.preventDefault();
 
@@ -62,11 +63,13 @@ setEnteredDate('');
         </div>
         <div>
           <label>Date</label>
-          <input type="date" value={enteredDate} min="2000-01-01" max="2025-12-31" onChange={dateChangeHandler}/>
+          <input type="date" value={enteredDate} min="null" max="null" onChange={dateChangeHandler}/>
         </div>
         <div>
+        <button type="button" onClick={props.onCancel}>Cancel</button>
           <button type="submit">Add Expense</button>
         </div>
+        
       </Card>
     </form>
   );
