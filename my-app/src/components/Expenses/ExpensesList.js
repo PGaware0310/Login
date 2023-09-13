@@ -1,4 +1,5 @@
 import React from 'react';
+import './ExpensesList.css';
 import ExpenseItem from './ExpenseItem';
 const ExpensesList=(props)=>{
    
@@ -6,18 +7,20 @@ const ExpensesList=(props)=>{
     return <h2>Found no expenses.</h2>
    }
    return(
-    <ul>
-    { props.items.map((ele)=>{
-        return(
+    <div className='expenses-list'>
+    
+    { props.items.map((ele)=>(
+        
     <ExpenseItem 
     key={ele.id}
     title={ele.title}
      amount={ele.amount}  
      location={ele.location}
      date={ele.date}/>   
-        );
-     }) }
-    </ul>
+      
+     )) }
+    
+    </div>
    );
     }
 export default ExpensesList;
